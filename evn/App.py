@@ -18,4 +18,9 @@ import time
 driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 
 driver.get("https://www.rozetka.com.ua")
+time.sleep(5)
+elem = driver.find_element(By.CLASS_NAME, "search-form__input ng-pristine ng-valid ng-touched")
+time.sleep(5)
+elem.send_keys("Samsung")
+#class="search-form__input ng-pristine ng-valid ng-touched"
 
